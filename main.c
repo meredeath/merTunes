@@ -13,5 +13,11 @@ int main(){
 
   n0 = insert_front(n0,"Never Gonna Give You Up","Rick Astley");
   print_list(n0);
+  struct song_node * n1 = malloc(sizeof(struct song_node));
+  strncpy(n1->name,(char *)&"Star",100);
+  strncpy(n1->artist,(char *)&"Rick Astley",100);
+  printf("%d\n", compare(n0,n1));
+  printf("%d\n", compare(n0->next,n1));
+
   return 0;
 }

@@ -30,3 +30,11 @@ struct song_node * free_list(struct song_node *first) {
 	}
 	return NULL;
 }
+int compare(struct song_node *a, struct song_node *b) {
+	if (a->artist == b->artist) {
+		return strcmp(a->name,b->name);
+	}
+	return strcmp(a->artist,b->artist);
+}
+
+

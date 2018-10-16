@@ -45,14 +45,14 @@ struct song_node * insert_ordered(struct song_node *first, char * n, char * a) {
 	if (first == NULL) {
 		return ref;
 	}
-	if (compare(new_node,first) <= 0) {
+	if (compare(ref,first) <= 0) {
 		ref->next = first;
 		return ref;
 	}
 	struct song_node *prev = first;
 	struct song_node *cur = prev->next;
 	while (cur != NULL) {
-		if (compare(new_node,cur) <= 0) {
+		if (compare(ref,cur) <= 0) {
 			ref->next = cur;
 			prev->next = ref;
 			return first;

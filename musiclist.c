@@ -36,5 +36,8 @@ int compare(struct song_node *a, struct song_node *b) {
 	}
 	return strcmp(a->artist,b->artist);
 }
+void insert_ordered(struct song_node *new) {
+	
+}
 
 

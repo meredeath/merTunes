@@ -4,7 +4,7 @@
 #include "musiclist.h"
 
 int main(){
-  
+
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Making a musiclist and testing print: \n");
   struct song_node * n0 = malloc(sizeof(struct song_node));
@@ -34,11 +34,14 @@ int main(){
   n0 = insert_ordered(n0, "Monster", "Rihanna");
   n0 = insert_ordered(n0, "Pon De Replay", "Rihanna");
   print_list(n0);
-
   struct song_node * n2 = new_node("Let it Go","Idina Menzel");
   n2 = insert_ordered(n2, "Life Is A Highway", "Rascal Flatts");
   print_list(n2);
-  
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Testing random: \n");
+  struct song_node *r = return_rand(n0);
+  print_list(r);
 
   return 0;
 }

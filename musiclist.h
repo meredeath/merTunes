@@ -1,6 +1,14 @@
 #ifndef LINK_LIST_H
 #define LINK_LIST_H
 
+//IGNORE
+/*
+struct music_list{
+  song_node *first;
+  song_node *last;
+  int length;
+}
+*/
 
 struct song_node{
   char name[100];

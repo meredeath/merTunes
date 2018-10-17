@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "musiclist.h"
 
 void print_list(struct song_node *first) {
@@ -65,3 +66,29 @@ struct song_node * insert_ordered(struct song_node *first, char * n, char * a) {
 }
 
 
+struct song_node * return_rand(struct song_node *first){
+
+  int len = 0;
+  struct song_node * cur = first;
+  while(cur){
+    len++;
+    cur = cur->next;
+  }
+  
+  srand(time(NULL));
+  int r = rand() % len;
+
+  struct song_node *temp = first;
+  while(r>0){
+    temp = temp->next;
+    r--;
+  }
+
+  struct song_node *ans = new_node(temp->name,temp->artist);
+  return ans;
+}
+
+/*
+struct song_node * find_node(struct music_list *s, char *n, char *a);
+struct song_node * first_song_of(struct music_list *s, char *a);
+*/

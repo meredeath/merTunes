@@ -14,6 +14,14 @@ void print_list(struct song_node *first) {
 	}
 	printf("End List\n");
 }
+
+void print_single(struct song_node *first){
+  printf("Begin List\n");
+  printf("Song Name: %s\n", first->name);
+  printf("Artist Name: %s\n", first->artist);
+  printf("End List\n");
+}
+
 struct song_node * insert_front(struct song_node *first, char * n, char * a) {
 	struct song_node *ref = new_node(n,a);
 	ref->next = first;
@@ -84,11 +92,24 @@ struct song_node * return_rand(struct song_node *first){
     r--;
   }
 
-  struct song_node *ans = new_node(temp->name,temp->artist);
-  return ans;
+  //struct song_node *ans = new_node(temp->name,temp->artist);
+  return temp;
+}
+
+struct song_node * find_node(struct song_node *first, char *n, char *a){
+  struct song_node *temp = new_node(n,a);
+  struct song_node *cur = first;
+  while(cur){
+    if(compare(cur,temp)==0){
+      free(temp);
+      return cur;
+    }
+    cur = cur->next;
+  }
+  free(temp);
+  return first;
 }
 
 /*
-struct song_node * find_node(struct music_list *s, char *n, char *a);
 struct song_node * first_song_of(struct music_list *s, char *a);
 */

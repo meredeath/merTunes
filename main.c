@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "musiclist.h"
+#include "musiclib.h"
 
 int main(){
 
@@ -67,5 +68,9 @@ int main(){
   print_list(killed2);
   struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
   print_list(alive);
+
+  struct song_node *mlib[27];
+  add_song(mlib, "abcd", "ef");
+  print_list(mlib[4]);
   return 0;
 }

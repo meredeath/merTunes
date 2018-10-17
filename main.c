@@ -58,5 +58,12 @@ int main(){
   print_single(rihanna);
   struct song_node *yikes = first_song_of(n0, "Bob Ross");
   print_single(yikes);
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Testing remove_node: \n");
+  struct song_node *killed = remove_node(n0, "Monster", "Lady Gaga");
+  print_single(killed);
+  struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
+  print_list(alive);
   return 0;
 }

@@ -77,18 +77,20 @@ struct song_node * insert_ordered(struct song_node *first, char * n, char * a) {
 	return first;
 }
 
-
-struct song_node * return_rand(struct song_node *first){
-
-  int len = 0;
-  struct song_node * cur = first;
-  while(cur){
+int len(struct song_node *first) {
+ 	int len = 0;
+ 	struct song_node * cur = first;
+ 	while(cur){
     len++;
     cur = cur->next;
   }
-  
+  return len;
+}
+
+struct song_node * return_rand(struct song_node *first){
+
   srand(time(NULL));
-  int r = rand() % len;
+  int r = rand() % len(first);
 
   struct song_node *temp = first;
   while(r>0){
@@ -124,4 +126,29 @@ struct song_node * first_song_of(struct song_node *first, char *a){
   }
   printf("%s not found in queue\n",a);
   return NULL;
+}
+
+struct song_node * remove_node(struct song_node *first, char *n, char *a) {
+	struct song_node *temp = new_node(n,a);
+	struct song_node *prev = NULL;
+  struct song_node *cur = first;
+  while(cur){
+    if(compare(cur,temp)==0){
+      free(temp);
+      if(cur == first) {
+      	temp = first->next;
+      	free(cur);
+      	return temp;
+      }
+      else {
+      	prev->next = cur->next;
+      	free(cur);
+      	return first;
+      }
+    }
+    prev = cur;
+    cur = cur->next;
+  }
+  free(temp);
+  return first;
 }

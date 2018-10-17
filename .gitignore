@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+*test
+*a.out
+*~
 
 # Object files
 *.o

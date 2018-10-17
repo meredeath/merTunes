@@ -16,6 +16,10 @@ void print_list(struct song_node *first) {
 }
 
 void print_single(struct song_node *first){
+  if(first==NULL){
+    printf("This list has nothing in it/your value was not found.\n");
+    return;
+  }
   printf("Begin List\n");
   printf("Song Name: %s\n", first->name);
   printf("Artist Name: %s\n", first->artist);
@@ -107,9 +111,17 @@ struct song_node * find_node(struct song_node *first, char *n, char *a){
     cur = cur->next;
   }
   free(temp);
-  return first;
+  return NULL;
 }
 
-/*
-struct song_node * first_song_of(struct music_list *s, char *a);
-*/
+struct song_node * first_song_of(struct song_node *first, char *a){
+  struct song_node *cur = first;
+  while(cur && strcmp(cur->artist,a)<=0){
+    if(strcmp(cur->artist,a)==0){
+      return cur;
+    }
+    cur = cur->next;
+  }
+  printf("%s not found in queue\n",a);
+  return NULL;
+}

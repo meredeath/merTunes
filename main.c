@@ -47,8 +47,16 @@ int main(){
   printf("Testing find_node: \n");
   struct song_node *found = find_node(n0, "Monster", "Lady Gaga");
   print_single(found);
-
   struct song_node *not = find_node(n0, "Turn Down For What", "Lil Jon");
   print_list(not);
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Testing find_first_song: \n");
+  struct song_node *JT = first_song_of(n0, "Justin Timberlake");
+  print_single(JT);
+  struct song_node *rihanna = first_song_of(n0, "Rihanna");
+  print_single(rihanna);
+  struct song_node *yikes = first_song_of(n0, "Bob Ross");
+  print_single(yikes);
   return 0;
 }

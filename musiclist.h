@@ -27,5 +27,4 @@ struct song_node * return_rand(struct song_node *first);
 struct song_node * find_node(struct song_node *first, char *n, char *a);
 struct song_node * first_song_of(struct song_node *first, char *a);
 
-
 #endif

@@ -62,7 +62,9 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Testing remove_node: \n");
   struct song_node *killed = remove_node(n0, "Monster", "Lady Gaga");
-  print_single(killed);
+  print_list(killed);
+  struct song_node *killed2 = remove_node(n0, "Can't Stop The Feeling", "Justin Timberlake");
+  print_list(killed2);
   struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
   print_list(alive);
   return 0;

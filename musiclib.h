@@ -1,4 +1,4 @@
 #include "musiclist.h"
 
-struct song_node *list[27];
+void add_song(struct song_node *list[27], char *n, char *a);
 

@@ -5,17 +5,17 @@
 #include "musiclist.h"
 #include "musiclib.h"
 
-int get_index(char *a) {
-	if (a[0]-'a' < 0 || a[0]-'a' > 25) {
+int get_index(char c) {
+	if (c-'a' < 0 || c-'a' > 25) {
 		return 26;
 	}
 	else {
-		return a[0]-'a';
+		return c-'a';
 	}
 }
 
 void add_song(struct song_node *list[], char *n, char *a) {
-	int index = get_index(a);
+	int index = get_index(a[0]);
 	
 	if (list[index] == NULL) {
 		list[index] = new_node(n,a);

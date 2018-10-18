@@ -9,5 +9,5 @@ musiclib.o: musiclib.c musiclib.h musiclist.h
 run:
 	./test
 clean:
-	rm *.o a.out test
+	rm *.o test
 	ls

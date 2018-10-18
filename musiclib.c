@@ -45,7 +45,7 @@ void print_lib(struct song_node *list[]) {
 }
 
 void print_letter(struct song_node *list[], char l) {
-	int index = get_index(a);
+	int index = get_index(l);
 	if (index < 26) {
 		printf("%c list:\n", 'a' + index);
 		print_list(list[i]);

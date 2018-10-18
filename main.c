@@ -70,6 +70,9 @@ int main(){
   print_list(alive);
 
   struct song_node *mlib[27];
+  for(int i = 0;i<27;i++) {
+    mlib[i]=NULL;
+  }
   add_song(mlib, "abcd", "ef");
   print_list(mlib[4]);
   return 0;

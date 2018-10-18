@@ -8,8 +8,7 @@ void print_list(struct song_node *first) {
 	printf("Begin List\n");
 	struct song_node *current = first;
 	while(current != NULL) {
-		printf("Song Name: %s\n", current->name);
-		printf("Artist Name: %s\n", current->artist);
+		print_single(current);
 		current = current->next;
 	}
 	printf("End List\n");
@@ -20,10 +19,8 @@ void print_single(struct song_node *first){
     printf("This list has nothing in it/your value was not found.\n");
     return;
   }
-  printf("Begin List\n");
   printf("Song Name: %s\n", first->name);
   printf("Artist Name: %s\n", first->artist);
-  printf("End List\n");
 }
 
 struct song_node * insert_front(struct song_node *first, char * n, char * a) {

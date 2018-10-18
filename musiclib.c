@@ -5,14 +5,18 @@
 #include "musiclist.h"
 #include "musiclib.h"
 
-void add_song(struct song_node *list[], char *n, char *a) {
-	int index;
+void get_index(char *a) {
 	if (a[0]-'a' < 0 || a[0]-'a' > 25) {
-		index = 26;
+		return 26;
 	}
 	else {
-		index = a[0]-'a';
+		return a[0]-'a';
 	}
+}
+
+void add_song(struct song_node *list[], char *n, char *a) {
+	int index = get_index(a);
+	
 	if (list[index] == NULL) {
 		list[index] = new_node(n,a);
 	}
@@ -38,4 +42,16 @@ void print_lib(struct song_node *list[]) {
 			printf("Misc list:\n");
 			print_list(list[26]);
 		}
+}
+
+void print_letter(struct song_node *list[], char l) {
+	int index = get_index(a);
+	if (index < 26) {
+		printf("%c list:\n", 'a' + index);
+		print_list(list[i]);
+	}
+	else {
+		printf("Misc list:\n");
+		print_list(list[26]);
+	}
 }

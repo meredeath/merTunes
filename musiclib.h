@@ -4,5 +4,5 @@ void add_song(struct song_node *list[27], char *n, char *a);
 void clear(struct song_node *list[]);
 void print_lib(struct song_node *list[]);
 void print_letter(struct song_node *list[], char l);
-void get_index(char *a);
+int get_index(char *a);
 

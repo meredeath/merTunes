@@ -5,7 +5,7 @@
 #include "musiclist.h"
 #include "musiclib.h"
 
-void get_index(char *a) {
+int get_index(char *a) {
 	if (a[0]-'a' < 0 || a[0]-'a' > 25) {
 		return 26;
 	}

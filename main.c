@@ -79,6 +79,8 @@ int main(){
   clear(mlib);
   print_lib(mlib);
 
+
+  add_song(mlib, "acd", "efg");
   print_letter(mlib, 'e');
 
   return 0;

@@ -30,7 +30,7 @@ void clear(struct song_node *list[]) {
 void print_lib(struct song_node *list[]) {
 	for(int i = 0; i < 26; i++) {
 		if (list[i]) {
-			printf("%s list:\n", 'a' + i);
+			printf("%c list:\n", 'a' + i);
 			print_list(list[i]);
 		}
 	}

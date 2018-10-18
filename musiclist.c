@@ -32,8 +32,8 @@ struct song_node * insert_front(struct song_node *first, char * n, char * a) {
 	return ref;
 }
 struct song_node * free_list(struct song_node *first) {
-	if (first->next == NULL) {
-		free(first);
+	if (first == NULL) {
+		return NULL;
 	}
 	else {
 		free_list(first->next);

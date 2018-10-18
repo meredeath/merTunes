@@ -20,3 +20,9 @@ void add_song(struct song_node *list[], char *n, char *a) {
 		list[index] = insert_ordered(list[index],n,a);
 	}
 }
+
+void clear(struct song_node *list[]) {
+	for(int i = 0; i < 27; i++) {
+		list[i] = free_list(list[i]);
+	}
+}

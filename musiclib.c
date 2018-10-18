@@ -26,3 +26,16 @@ void clear(struct song_node *list[]) {
 		list[i] = free_list(list[i]);
 	}
 }
+
+void print_lib(struct song_node *list[]) {
+	for(int i = 0; i < 26; i++) {
+		if (list[i]) {
+			printf("%s list:\n", 'a' + i);
+			print_list(list[i]);
+		}
+	}
+	if (list[26]) {
+			printf("Misc list:\n");
+			print_list(list[26]);
+		}
+}

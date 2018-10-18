@@ -74,9 +74,9 @@ int main(){
     mlib[i]=NULL;
   }
   add_song(mlib, "abcd", "ef");
-  print_list(mlib[4]);
+  print_lib(mlib);
 
   clear(mlib);
-  print_list(mlib[4]);
+  print_lib(mlib);
   return 0;
 }

@@ -48,7 +48,7 @@ void print_letter(struct song_node *list[], char l) {
 	int index = get_index(l);
 	if (index < 26) {
 		printf("%c list:\n", 'a' + index);
-		print_list(list[i]);
+		print_list(list[index]);
 	}
 	else {
 		printf("Misc list:\n");

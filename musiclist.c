@@ -51,6 +51,7 @@ struct song_node * new_node(char * n, char * a) {
 	struct song_node *ref = malloc(sizeof(struct song_node));
 	strncpy(ref->name,n,100);
 	strncpy(ref->artist,a,100);
+	ref->next = NULL;
 	return ref;
 }
 struct song_node * insert_ordered(struct song_node *first, char * n, char * a) {

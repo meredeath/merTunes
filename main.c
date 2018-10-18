@@ -79,7 +79,7 @@ int main(){
   clear(mlib);
   print_lib(mlib);
 
-  print_letter(mlib, 'e')
+  print_letter(mlib, 'e');
 
   return 0;
 

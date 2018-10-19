@@ -57,3 +57,9 @@ struct song_node *find_song(struct song_node *list[], char *n, char *a) {
 	int index = get_index(a[0]);
 	return find_node(list[index], n, a);
 }
+
+struct song_node *find_artist(struct song_node *list[], char *a) {
+	int index = get_index(a[0]);
+	return first_song_of(list[index], a);
+}
+

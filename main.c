@@ -122,6 +122,13 @@ int main(){
   printf("Song should not be found:\n");
   print_single(find_song(mlib, "xyz", "098"));
 
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Finding an artist : \n");
+  printf("Artist should be found:\n");
+  print_single(find_artist(mlib, "befg"));
+  printf("Artist should not be found:\n");
+  print_single(find_artist(mlib, "098"));
+
   return 0;
 
 

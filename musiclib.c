@@ -55,3 +55,8 @@ void print_letter(struct song_node *list[], char l) {
 		print_list(list[26]);
 	}
 }
+
+struct song_node *find_song(struct song_node *list[], char *n, char *a) {
+	int index = get_index(a[0]);
+	return find_node(list[index], n, a);
+}

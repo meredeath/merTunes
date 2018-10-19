@@ -140,10 +140,13 @@ int main(){
   delete_song(mlib, "acd", "efg");
   print_lib(mlib);
 
-   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("printing out result after deleting efg, acd \n");
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("printing out result for pick_ran \n");
+  print_single(pick_ran(mlib));
   shuffle(mlib, 5);
   //print_lib(mlib);
+  
   return 0;
 
 

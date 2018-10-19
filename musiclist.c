@@ -46,8 +46,8 @@ int compare(struct song_node *a, struct song_node *b) {
 }
 struct song_node * new_node(char * n, char * a) {
 	struct song_node *ref = malloc(sizeof(struct song_node));
-	strncpy(ref->name,n,strlen(n));
-	strncpy(ref->artist,a,strlen(a));
+	strncpy(ref->name,n,100);
+	strncpy(ref->artist,a,100;
 	ref->next = NULL;
 	return ref;
 }

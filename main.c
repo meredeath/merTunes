@@ -44,12 +44,12 @@ int main(){
   struct song_node *r = return_rand(n0);
   print_single(r);
 
-  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("Testing find_node: \n");
-  struct song_node *found = find_node(n0, "Monster", "Lady Gaga");
-  print_single(found);
-  struct song_node *not = find_node(n0, "Turn Down For What", "Lil Jon");
-  print_list(not);
+  // printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  // printf("Testing find_node: \n");
+  // struct song_node *found = find_node(n0, "Monster", "Lady Gaga");
+  // print_single(found);
+  // struct song_node *not = find_node(n0, "Turn Down For What", "Lil Jon");
+  // print_list(not);
 
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Testing find_first_song: \n");
@@ -60,14 +60,14 @@ int main(){
   struct song_node *yikes = first_song_of(n0, "Bob Ross");
   print_single(yikes);
 
-  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("Testing remove_node: \n");
-  struct song_node *killed = remove_node(n0, "Monster", "Lady Gaga");
-  print_list(killed);
-  struct song_node *killed2 = remove_node(n0, "Can't Stop The Feeling", "Justin Timberlake");
-  print_list(killed2);
-  struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
-  print_list(alive);
+  // printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  // printf("Testing remove_node: \n");
+  // struct song_node *killed = remove_node(n0, "Monster", "Lady Gaga");
+  // print_list(killed);
+  // struct song_node *killed2 = remove_node(n0, "Can't Stop The Feeling", "Justin Timberlake");
+  // print_list(killed2);
+  // struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
+  // print_list(alive);
 
   free_list(n0);
   free_list(n1);

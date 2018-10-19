@@ -119,9 +119,9 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Finding a song : \n");
   printf("Song should be found:\n");
-  print_single(find_song("acd", "efg"));
+  print_single(find_song(mlib, "acd", "efg"));
   printf("Song should not be found:\n");
-  print_single(find_song("xyz", "098"));
+  print_single(find_song(mlib, "xyz", "098"));
 
   return 0;
 

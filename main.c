@@ -77,7 +77,7 @@ int main(){
   }
   add_song(mlib, "abcd", "ef");
   add_song(mlib, "acd", "*efg");
-  add_song(mlib, "blah", "0ef");
+  //add_song(mlib, "blah", "0ef");
   add_song(mlib, "bleh", "befg");
   add_song(mlib, "meh", "bexf");
   add_song(mlib, "abd", "aef");

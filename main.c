@@ -108,6 +108,7 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Printing a single letter : \n");
   add_song(mlib, "acd", "efg");
+  add_song(mlib, "C sucks", "efg");
   add_song(mlib, "abcd", "ef");
   add_song(mlib, "acd", "*efg");
   add_song(mlib, "blah", "0ef");
@@ -129,6 +130,10 @@ int main(){
   printf("Artist should not be found:\n");
   print_single(find_artist(mlib, "098"));
 
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Printing out all of an artist's songs \n");
+  printf("printing efg songs: \n");
+  print_artist(mlib, "efg");
   return 0;
 
 

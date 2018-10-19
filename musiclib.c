@@ -53,6 +53,18 @@ void print_letter(struct song_node *list[], char l) {
 	}
 }
 
+void print_artist(struct song_node *list[], char * a){
+  int index = get_index(a[0]);
+  struct song_node *cur = list[index];
+  while(cur){
+    if(strcmp(cur->artist, a)==0){
+      print_single(cur);
+    }
+    cur = cur->next;
+  }
+  printf("This artist does not exist in the queue.\n");
+}
+
 struct song_node *find_song(struct song_node *list[], char *n, char *a) {
 	int index = get_index(a[0]);
 	return find_node(list[index], n, a);

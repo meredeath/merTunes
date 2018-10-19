@@ -113,7 +113,6 @@ int main(){
   add_song(mlib, "blah", "0ef");
   add_song(mlib, "bleh", "befg");
   add_song(mlib, "meh", "bexf");
-  add_song(mlib, "abd", "aef");
   print_letter(mlib, 'e');
 
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");

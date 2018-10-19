@@ -27,6 +27,7 @@ void clear(struct song_node *list[]) {
 }
 
 void print_lib(struct song_node *list[]) {
+	printf("Begin Library\n");
 	for(int i = 0; i < 26; i++) {
 		if (list[i]) {
 			printf("%c list:\n", 'a' + i);
@@ -37,6 +38,7 @@ void print_lib(struct song_node *list[]) {
 			printf("Misc list:\n");
 			print_list(list[26]);
 		}
+	printf("End Library\n");
 }
 
 void print_letter(struct song_node *list[], char l) {

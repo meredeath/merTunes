@@ -79,18 +79,25 @@ int main(){
   for(int i = 0;i<27;i++) {
     mlib[i]=NULL;
   }
+  printf("\n");
   add_song(mlib, "abcd", "ef");
   print_lib(mlib);
+  printf("\n");
   add_song(mlib, "acd", "*efg");
   print_lib(mlib);
+  printf("\n");
   add_song(mlib, "blah", "0ef");
   print_lib(mlib);
+  printf("\n");
   add_song(mlib, "bleh", "befg");
   print_lib(mlib);
+  printf("\n");
   add_song(mlib, "meh", "bexf");
   print_lib(mlib);
+  printf("\n");
   add_song(mlib, "abd", "aef");
   print_lib(mlib);
+  printf("\n");
 
   
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
@@ -99,9 +106,22 @@ int main(){
   print_lib(mlib);
 
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("Clearing the music library :( : \n");
+  printf("Printing a single letter : \n");
   add_song(mlib, "acd", "efg");
+  add_song(mlib, "abcd", "ef");
+  add_song(mlib, "acd", "*efg");
+  add_song(mlib, "blah", "0ef");
+  add_song(mlib, "bleh", "befg");
+  add_song(mlib, "meh", "bexf");
+  add_song(mlib, "abd", "aef");
   print_letter(mlib, 'e');
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Finding a song : \n");
+  printf("Song should be found:\n");
+  print_single(find_song("acd", "efg"));
+  printf("Song should not be found:\n");
+  print_single(find_song("xyz", "098"));
 
   return 0;
 

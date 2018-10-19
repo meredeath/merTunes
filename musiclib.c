@@ -14,10 +14,21 @@ int get_index(char c) {
 	}
 }
 
+void shuffle(struct song_node *list[]){
+  srand(time(NULL));
+  int r = rand() %len(list);
+  print_lib(list)
+}
+
 void add_song(struct song_node *list[], char *n, char *a) {
   int index = get_index(a[0]);
   list[index] = insert_ordered(list[index],n,a);
 	
+}
+
+void delete_song(struct song_node *list[], char *n, char *a){
+  int index = get_index(a[0]);
+  list[index] = remove_node(list[index], n, a);
 }
 
 void clear(struct song_node *list[]) {

@@ -134,6 +134,11 @@ int main(){
   printf("Printing out all of an artist's songs \n");
   printf("printing efg songs: \n");
   print_artist(mlib, "efg");
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("printing out result after deleting efg \n");
+  delete_song(mlib, "acd", "efg");
+  print_lib(mlib);
   return 0;
 
 

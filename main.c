@@ -44,12 +44,12 @@ int main(){
   struct song_node *r = return_rand(n0);
   print_single(r);
 
-  // printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  // printf("Testing find_node: \n");
-  // struct song_node *found = find_node(n0, "Monster", "Lady Gaga");
-  // print_single(found);
-  // struct song_node *not = find_node(n0, "Turn Down For What", "Lil Jon");
-  // print_list(not);
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("Testing find_node: \n");
+  struct song_node *found = find_node(n0, "Monster", "Lady Gaga");
+  print_single(found);
+  struct song_node *not = find_node(n0, "Turn Down For What", "Lil Jon");
+  print_list(not);
 
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Testing find_first_song: \n");

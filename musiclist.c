@@ -101,16 +101,16 @@ struct song_node * return_rand(struct song_node *first){
 }
 
 struct song_node * find_node(struct song_node *first, char *n, char *a){
-  struct song_node *temp = new_node(n,a);
+  // struct song_node *temp = new_node(n,a);
   struct song_node *cur = first;
   while(cur){
-    if(compare(cur,temp)==0){
-      free(temp);
+    if(strcmp(cur->artist, a)==0 && strcmp(cur->name,n) == 0){
+      // free(temp);
       return cur;
     }
     cur = cur->next;
   }
-  free(temp);
+  // free(temp);
   return NULL;
 }
 

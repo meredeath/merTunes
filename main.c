@@ -92,7 +92,7 @@ int main(){
   add_song(mlib, "abd", "aef");
   print_lib(mlib);
 
-  /*
+  
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Clearing the music library :( : \n");
   clear(mlib);
@@ -102,7 +102,6 @@ int main(){
   printf("Clearing the music library :( : \n");
   add_song(mlib, "acd", "efg");
   print_letter(mlib, 'e');
-  */
 
   return 0;
 

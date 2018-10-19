@@ -127,16 +127,17 @@ struct song_node * first_song_of(struct song_node *first, char *a){
 }
 
 struct song_node * remove_node(struct song_node *first, char *n, char *a) {
-	struct song_node *temp = new_node(n,a);
+	// struct song_node *temp = new_node(n,a);
 	struct song_node *prev = NULL;
   struct song_node *cur = first;
   while(cur){
-    if(compare(cur,temp)==0){
-      free(temp);
+    // if(compare(cur,temp)==0){
+    if(strcmp(cur->artist, a)==0 && strcmp(cur->name,n) == 0){
+      // free(temp);
       if(cur == first) {
-      	temp = first->next;
+      	// temp = first->next;
       	free(cur);
-      	return temp;
+      	return first->next;
       }
       else {
       	prev->next = cur->next;
@@ -147,6 +148,6 @@ struct song_node * remove_node(struct song_node *first, char *n, char *a) {
     prev = cur;
     cur = cur->next;
   }
-  free(temp);
+  // free(temp);
   return first;
 }

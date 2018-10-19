@@ -108,9 +108,9 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Printing a single letter : \n");
   add_song(mlib, "acd", "efg");
-  add_song(mlib, "C sucks", "efg");
+  //add_song(mlib, "csucks", "efg");
   add_song(mlib, "abcd", "ef");
-  add_song(mlib, "acd", "*efg");
+  add_song(mlib, "acdd", "*efg");
   add_song(mlib, "blah", "0ef");
   add_song(mlib, "bleh", "befg");
   add_song(mlib, "meh", "bexf");

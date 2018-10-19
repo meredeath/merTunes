@@ -69,6 +69,10 @@ int main(){
   struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
   print_list(alive);
 
+  free_list(n0);
+  free_list(n1);
+  free_list(n2);
+
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Making a music library, adding some songs, and printing: \n");
   struct song_node *mlib[27];

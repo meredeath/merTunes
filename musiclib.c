@@ -16,13 +16,8 @@ int get_index(char c) {
 
 void add_song(struct song_node *list[], char *n, char *a) {
 	int index = get_index(a[0]);
+	list[index] = insert_ordered(list[index],n,a);
 	
-	if (list[index] == NULL) {
-		list[index] = new_node(n,a);
-	}
-	else {
-		list[index] = insert_ordered(list[index],n,a);
-	}
 }
 
 void clear(struct song_node *list[]) {

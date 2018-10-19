@@ -76,13 +76,19 @@ int main(){
     mlib[i]=NULL;
   }
   add_song(mlib, "abcd", "ef");
+  print_lib(mlib);
   add_song(mlib, "acd", "*efg");
-  //add_song(mlib, "blah", "0ef");
+  print_lib(mlib);
+  add_song(mlib, "blah", "0ef");
+  print_lib(mlib);
   add_song(mlib, "bleh", "befg");
+  print_lib(mlib);
   add_song(mlib, "meh", "bexf");
+  print_lib(mlib);
   add_song(mlib, "abd", "aef");
   print_lib(mlib);
 
+  /*
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Clearing the music library :( : \n");
   clear(mlib);
@@ -92,6 +98,7 @@ int main(){
   printf("Clearing the music library :( : \n");
   add_song(mlib, "acd", "efg");
   print_letter(mlib, 'e');
+  */
 
   return 0;
 

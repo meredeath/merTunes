@@ -14,10 +14,31 @@ int get_index(char c) {
 	}
 }
 
-void shuffle(struct song_node *list[]){
+void shuffle(struct song_node *list[], int n){
+  /*
+  int size = 0;
+  for(int i=0; i<26; i++){
+    if(list[i]!=NULL){
+      size+=len(list[i])
+    }
+  }
+  */
   srand(time(NULL));
-  int r = rand() %len(list);
-  print_lib(list)
+  while(n--){
+    print_single(pick_ran(list));
+  }
+}
+
+struct song_node * pick_ran(struct song_node *list[]){
+  srand(time(NULL));
+  int r = rand()%27;
+  int l = rand() % len(list[r]);
+  struct song_node * cur = list[r];
+  while(list[r] && l>=0){
+    cur = cur->next;
+    l--;
+  }
+  return cur;
 }
 
 void add_song(struct song_node *list[], char *n, char *a) {

@@ -69,9 +69,9 @@ int main(){
   struct song_node *alive = remove_node(n0, "Turn Down For What", "Lil Jon");
   print_list(alive);
 
-  free_list(n0);
-  free_list(n1);
-  free_list(n2);
+  //free_list(n0);
+  //free_list(n1);
+  //free_list(n2);
 
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Making a music library, adding some songs, and printing: \n");
@@ -108,7 +108,7 @@ int main(){
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Printing a single letter : \n");
   add_song(mlib, "acd", "efg");
-  //add_song(mlib, "csucks", "efg");
+  add_song(mlib, "csucks", "efg");
   add_song(mlib, "abcd", "ef");
   add_song(mlib, "acdd", "*efg");
   add_song(mlib, "blah", "0ef");
@@ -136,9 +136,14 @@ int main(){
   print_artist(mlib, "efg");
 
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-  printf("printing out result after deleting efg \n");
+  printf("printing out result after deleting efg, acd \n");
   delete_song(mlib, "acd", "efg");
   print_lib(mlib);
+
+   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("printing out result after deleting efg, acd \n");
+  shuffle(mlib, 5);
+  //print_lib(mlib);
   return 0;
 
 

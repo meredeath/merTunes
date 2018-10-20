@@ -98,7 +98,6 @@ int main(){
   add_song(mlib, "abd", "aef");
   print_lib(mlib);
   printf("\n");
-
   
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("Clearing the music library :( : \n");
@@ -113,6 +112,9 @@ int main(){
   add_song(mlib, "acdd", "*efg");
   add_song(mlib, "blah", "0ef");
   add_song(mlib, "bleh", "befg");
+  add_song(mlib, "wonderful","befg");
+  add_song(mlib, "dfklj jlksdf", "Dklj");
+  add_song(mlib, "Wow", "befg");
   add_song(mlib, "meh", "bexf");
   print_letter(mlib, 'e');
 
@@ -140,10 +142,12 @@ int main(){
   delete_song(mlib, "acd", "efg");
   print_lib(mlib);
 
-
   printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("printing out result for pick_ran \n");
   print_single(pick_ran(mlib));
+
+  printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  printf("printing out result for shuffle, 5 \n");
   shuffle(mlib, 5);
   //print_lib(mlib);
   
